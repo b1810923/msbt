@@ -1,0 +1,482 @@
+@charset "UTF-8";
+
+/* 字型：big caslon medium */
+@font-face{
+  font-family: English;
+  src: local("Times New Roman"),local("Georgia");
+}
+@font-face{
+  font-family: Chinese;
+  src: local("Heiti TC Light"),local("Heiti"),local("STHeiti Light"),local("儷黑 Pro"),local("LiHei Pro Medium"),local("微軟正黑體"),local("Microsoft JhengHei");
+
+}
+
+/*將有內距外距的元素歸零，避免不同瀏覽器內外距不同而錯位*/
+body, h1, h2, h3, h4, h5, h6, p, blockquote, th, td, div, dl, dt, dd, ul, ol, li, pre, code, form, fieldset, legend, input, button, textarea {
+  margin: 0;
+  padding: 0;
+}
+
+/*重置頁面基本字型大小及行高*/
+body,td,th {
+  /*font-family: Verdana, Geneva, sans-serif;*/
+  font-size: 100%;
+  line-height: 1;
+}
+
+/*將標題的字型大小及粗細都重置*/
+h1, h2, h3, h4, h5, h6 {
+  font-size: 100%;
+  /*font-weight: normal;*/
+}
+
+/*將影像及欄位集的邊框歸零*/
+img, fieldset {
+  border: 0;
+}
+
+/*將清單樣式清除，其實只要list-style: none就好了，後面都是為了特定瀏覽器*/
+ol, ul {
+  list-style: none;
+}
+
+/*將表格的邊框設定為結合，第二行是為了特定瀏覽器*/
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+/*重置表格註解及標題儲存格的對齊*/
+caption, th {
+  text-align: left;
+}
+
+/*將連結、底線重置；其實應該要再加上一個 del 刪除線的，但常常用del就不重置了*/
+a, ins {
+  text-decoration: none;
+  outline: none;
+  hlbr:expression(this.onFocus=this.blur());
+}
+
+span{
+  margin: 0;
+  padding: 0;
+}
+
+ul,li{
+  margin: 0;
+  padding: 0;
+}
+
+img{
+  border: 0;
+  width:100%;
+}
+/*********************
+* CSS Font Size Style
+**********************/
+body{
+  font-family: English, Chinese, sans-serif; 
+  font-family: 'Heiti TC Light','黑體','Heiti','STHeiti Light','微軟正黑體','Microsoft JhengHei', sans-serif;
+ 
+  font-size: 13px; /* small: 13px medium= normal:15px */
+}
+
+h1{
+  font-size: 550%; /* 66px */
+}
+
+h2{
+  font-size: 192%; /* 23px */
+}
+
+h3{
+  font-size: 134%; /* 16px */
+}
+
+h4{
+  font-size: 120%; /* 13px */
+}
+
+h5{
+  font-size: 110%; /**/
+}
+p{
+  line-height: 1.3em; /* 文字行距 */
+  letter-spacing: 0.15em;  /*文字間距 */
+  /*word-spacing: 0.1em; /* */
+  margin: 1.1em 0; /* p元素之間有1.12em的margin */
+}
+/****************************************
+* total css
+****************************************/
+/* 全站div */
+#website{
+  width: 1000px;
+  margin: 0 auto;
+}
+/* main menu & content */
+#header{
+  top:0;
+  height: 20%;
+  width: 100%;
+  height: 160px;
+  
+}
+#content{
+  width: 100%;
+  height: 100%;
+}
+
+/******************************************************
+* header CSS
+********************************************************/
+/* header content*/
+#logo{
+  /* img size: 491 x 106 */
+  float: left;
+  width: 491px;
+}
+#menu_icon{
+  position:relative;
+  float: right;
+}
+#contact_us{
+  /* all pic about 180px width */
+  /*
+   first: our mail;
+
+   if click other icon, will turn gray.
+  */
+  top: 10px; 
+  right: 0;
+  position: relative;
+  float: right;
+}
+#contact_us li{
+  position: relative;
+  float: left;
+}
+#m_phone_r, #m_email_g, #m_fb_r, #m_youtube_r, #m_phone, #m_fb, #m_youtube,
+#m_msbt_r, #m_latest_r, #m_allpro_r, #m_sample_r, #m_setup_r, #m_contact_r{
+  display: none;
+}
+#info span{
+  color: #a82124;
+  z-index: 3;
+}
+
+#m_phone{
+  position: absolute;
+  margin-top: 45px;
+  right: 0px;
+  text-align: right;
+}
+
+#m_email{
+  position: absolute;
+  margin-top: 45px;
+  right: 0;
+  width: 140px;
+  text-align: right;
+}
+#m_fb{
+  position: absolute;
+  margin-top: 45px;
+  margin-left: 280px;
+}
+
+#m_youtube{
+  position: absolute;
+  margin-top: 45px;
+  margin-left: 300px;
+}
+/****************
+* main menu CSS
+***************/
+#main_menu{
+  position: absolute;
+  margin-top: 85px;
+  right: 0;
+  width: 500px;
+  height: 30px;
+  text-align: right;
+  cursor: pointer;
+}
+/* li no float, display:inline / ul: style-type:none; text-align:right; width:100%*/
+#main_menu ul{
+  width: 100%;
+  text-align: right;
+}
+#main_menu li{
+  display: inline;
+  margin-left:25px;
+  margin-right: 0px;
+  padding-right: 0px;
+  color: #595757;
+}
+a{
+  color: #595757;
+}
+a:link{ /* unvisited link */
+  color: #595757;
+}
+
+a:visited{ /* visited link */
+  color: #595757;
+}
+
+a:hover{ /* mouse over link */
+  color: #a82124;
+}
+
+a:active{ /* selected link */
+  color: #a82124;
+}
+/**********
+* div CSS
+***********/
+#aboutMSBT{
+  width: 100%;
+  height: 100%;
+  border: 1px solid black;
+}
+/* top content */
+#pageLeft{
+  width: 33%;
+  float: left;
+  height: 120%;
+}
+#pageMSBT{
+  width: 67%;
+  float: right;
+  background-color: #ffffff;
+}
+#pageMSBT img{
+  width: 33%;
+  position: relative;
+  float: left;
+}
+#pageMSBT #desc{
+  position: relative;
+  float: right;
+}
+/* page content */
+#pageContent{
+  width: 33%;
+  float: left;
+  height: 375px;
+  margin: 0;
+  margin-bottom: 50px;
+  
+  padding-top: 0;
+}
+#pageContent a{
+  color: #a82124;
+}
+.bgcolor{
+  background-color: #eeeeee;
+}
+.sample{
+  margin-top:8px;
+  height: 300px;
+  padding: 10px;
+  padding-top: 5px;
+  padding-bottom: 0.2px;
+  border: 2px solid white;
+}
+.white{
+  padding-left: 0px;
+  padding-right: 0px;
+}
+.padding{
+  padding: 0 20px;
+}
+.center{
+  padding:0 15px;
+}
+.left{
+  padding-right: 20px;
+}
+
+.EngCap ul{
+  /**/
+  margin-left: 30%;
+  height: 100%;
+}
+.EngCap h1{
+  font-family: English;
+  color: black;
+  font-size: 85px;
+  
+}
+.EngCap li{
+  line-height: 1.3em; /* 文字行距 */
+  letter-spacing: 0.15em;  /*文字間距 */
+  /*word-spacing: 0.1em; /* */
+  margin: 1.1em 0; /* p元素之間有1.12em的margin */
+}
+.WordCap{
+  display: inline-block;
+  background-color: #f4f4f4;
+}
+
+.PicCap .icon{
+  width: 100px;
+  height: 90px;
+  
+}
+.PicCap .icon img{
+  height: 90%;
+}
+.EngCap,.WordCap,.PicCap{
+  color: #595757;
+  
+}
+.title{
+  font-size: 130%;
+  margin: 20px 0;  
+  margin-top: 30px;
+  color: black;
+}
+
+
+/*****************
+* product
+****************/
+
+/* allProContent */
+#allProContent{
+  position: absolute;
+}
+#allProContent h4{
+  font-size: 14px;
+  margin-top: -8px;
+  width:195px;
+  z-index: 1;
+  color: black;
+}
+.pro_box{
+  display: inline-block;
+  border-left: 1px solid #dddddd;
+  padding: 10px;
+  margin: 0;
+  margin-right: 30px;
+  margin-bottom: 40px;
+  overflow: hidden;
+  width:190px;
+  
+}
+
+.box_less{
+  margin: 5px;
+}
+.proitems{
+  font-size: 13px;
+  color: #595757;
+  line-height: 20px;
+
+  padding-top: 15px;
+  padding-bottom: 25px;
+}
+#allProContent .proImg{
+  margin-bottom: -10px;
+  width: 180px;
+}
+
+#allProContent a{
+  color: #595757;
+
+}
+#allProContent h4 a{
+  color:black;
+}
+#allProContent a.items:hover{
+  color: #a82124;
+}
+
+
+/**************
+* setup & teach
+**************/
+#setupMenu{
+  display: block;
+  width: 20%;
+  text-align: left;
+  float: left;
+  /*background-color:#bce0de;*/
+
+}
+#page_setup{
+  width: 80%;
+  float: right;
+}
+
+#setupContent #pageContent{
+  margin-left: 40px;
+  float: right;
+}
+/****************
+* contact
+******************/
+.topCenter{
+  margin: 20px 10px;
+}
+
+#pageContentblog{
+  width: 33%;
+  height: 375px;
+  float: left;
+
+}
+#pageContentblog a{
+  color: #a82124;
+}
+.blog{
+  border-top:1px solid black;
+  border-bottom: 1px solid black;
+}
+.fb{ /*fb對其格線*/
+  margin-top: 0px;
+  margin-left: 10px;
+}
+/* 四格訂購通路 */
+.waysLeft{
+  float: left;
+  width: 135px;
+  height: 100px;
+  margin-bottom:20px;
+  letter-spacing: 0.1em;  /*文字間距 */
+}
+
+.waysRight{
+  float: left;
+  width: 165px;
+  height: 100px;
+  margin-bottom:20px;
+  letter-spacing: 0.1em;  /*文字間距 */
+}
+.waysLeft p, .waysRight p{
+  margin-left: 15px;
+}
+.ways p{
+  padding-left: 14px;
+  line-height: 1.3em; /* 文字行距 */
+  letter-spacing: 0.1em;  /*文字間距 */
+  /*word-spacing: 0.1em; /* */
+  margin: 0.7em 0; /* p元素之間有1.12em的margin */
+}
+.ways span p{
+  padding-left: 0px;
+}
+#service a{color:#a82124;}
+#yahoo a{color: purple; width:200px;}
+#pchome a{color: blue;}
+#rakuten a{color: red;}
+#footer{
+  margin: 0;
+  padding-left: 14px;
+  line-height: 1.5em; /* 文字行距 */
+  letter-spacing: 0.1em;  /*文字間距 */
+  /*word-spacing: 0.1em; /* */
+}

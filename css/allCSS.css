@@ -1,0 +1,488 @@
+@charset "UTF-8";
+
+/* 字型：big caslon medium */
+@font-face{
+  font-family: Big Caslon Medium;
+  src: local("BigCaslon Medium"),local("BigCaslon"),local("Ayuthaya")
+}
+/* 字型：avenir next- ultra light 
+@font-face{
+  font-family: AvenirNext-Ultra Light;
+  src: local(),url();
+}
+*/
+/* 字型：細黑體
+@font-face{
+  font-family: 細黑體;
+  src: local(),url();
+}
+*/
+/*將有內距外距的元素歸零，避免不同瀏覽器內外距不同而錯位*/
+body, h1, h2, h3, h4, h5, h6, p, blockquote, th, td, div, dl, dt, dd, ul, ol, li, pre, code, form, fieldset, legend, input, button, textarea {
+  margin: 0;
+  padding: 0;
+}
+
+/*重置頁面基本字型大小及行高*/
+body,td,th {
+  /*font-family: Verdana, Geneva, sans-serif;*/
+  font-size: 100%;
+  line-height: 1;
+}
+
+/*將標題的字型大小及粗細都重置*/
+h1, h2, h3, h4, h5, h6 {
+  font-size: 100%;
+  /*font-weight: normal;*/
+}
+
+/*將影像及欄位集的邊框歸零*/
+img, fieldset {
+  border: 0;
+}
+
+/*將清單樣式清除，其實只要list-style: none就好了，後面都是為了特定瀏覽器*/
+ol, ul {
+  list-style: none;
+}
+
+/*將表格的邊框設定為結合，第二行是為了特定瀏覽器*/
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+/*重置表格註解及標題儲存格的對齊*/
+caption, th {
+  text-align: left;
+}
+
+/*將連結、底線重置；其實應該要再加上一個 del 刪除線的，但常常用del就不重置了*/
+a, ins {
+  text-decoration: none;
+  outline: none;
+  hlbr:expression(this.onFocus=this.blur());
+}
+
+span{
+  margin: 0;
+  padding: 0;
+}
+
+ul,li{
+  margin: 0;
+  padding: 0;
+}
+
+img{
+  border: 0;
+}
+/*********************
+* CSS Font Size Style
+**********************/
+body{
+  font-size: small; /* small: 12px medium:14 px */
+}
+
+h1{
+  font-size: 550%; /* 66px */
+}
+
+h2{
+  font-size: 192%; /* 23px */
+}
+
+h3{
+  font-size: 134%; /* 16px */
+}
+
+p{
+  font-size: 109%; /* 13px */
+}
+
+
+
+#menus{
+  margin: 0 auto;
+  overflow: hidden;
+}
+
+#menus li{
+  width: 100%;
+  overflow: hidden;
+}
+#menus li span{
+  display: inline;
+  float: left;
+  overflow: hidden;
+}
+/********/
+/* msbt */
+#website{
+  width: 1000px;
+  margin: 0 auto;
+}
+/*************/
+/* */
+#content{
+  margin: 0;
+  /*border: 1px solid green;*/
+}
+/****************************/
+/* WEB TOP header Main Menu */
+#header{
+  width: 1000px;
+  height: 166px;
+  margin: 0 auto;
+}
+#logo{
+  /* img size: 528 x 106 */
+  float: left;
+  width: 510px;
+}
+#menu_icon{
+  position: relative;
+  float: right;
+}
+#menu_icon li{
+  position:relative;
+  float: left;
+}
+#contact_us{
+  /* all pic about 180px width */
+  /*
+   first: our mail;
+
+   if click other icon, will turn gray.
+  */
+  top: 10px; right: 0;
+  position: relative;
+  float: right;
+}
+
+#main_menu{
+  /* all pic width about 480px */
+  margin-top: 70px;
+  width: 480px;
+  height: 36px;
+}
+#m_phone_r, #m_email_g, #m_fb_r, #m_youtube_r, #m_phone, #m_fb, #m_youtube,
+#m_msbt_r, #m_latest_r, #m_allpro_r, #m_sample_r, #m_setup_r, #m_contact_r{
+  display: none;
+}
+#info span{
+  color: #a82124;
+  z-index: 3;
+}
+
+#m_phone{
+  position: absolute;
+  margin-top: 45px;
+  margin-left: 353px;
+}
+
+#m_email{
+  position: absolute;
+  margin-top: 45px;
+  margin-left: 280px;
+  width: 170px;
+  
+}
+#m_fb{
+  position: absolute;
+  margin-top: 45px;
+  margin-left: 280px;
+}
+
+#m_youtube{
+  position: absolute;
+  margin-top: 45px;
+  margin-left: 300px;
+}
+/*********************/
+/* msbt menu&page CSS*/
+#topMenu{
+  position: relative;
+  float: left;
+  margin-left: 35px;
+  width: 180px; /*pic width:172px*/
+  color: #595757;
+  
+}
+#pageContent{
+  position: relative;
+  float: right;
+  top: 0px;
+  left: -183px;
+  color: #595757;
+  width: 550px;
+  line-height: 25px;
+  font-size: 9pt;
+}
+
+
+
+/***********************/
+/* msbt leftmenu css   */
+#about-b, #ask-b, #size-b, #price-b, #style-b, #sample-b{
+    display: none;
+}
+
+/***********************/
+/* msbt all pro CSS    */
+/* left menu */
+#string-b, #venetian-b, #roller-b, #double-b, #honeycomb-b, #vertical-b, #tempshade-b, #cushion-b, #curtain-b, #accessories-b{
+    display: none;
+}
+/* allProContent */
+#allProContent{
+  position: absolute;
+  left: -30px;
+  top: 35px;
+  width: 850px;
+}
+#allProContent h4{
+  font-size: 14px;
+  margin-top: -8px;
+  width:180px;
+  z-index: 99;
+  color: black;
+}
+.pro_box{
+  display: inline-block;
+  border-left: 1px solid #f4f4f4;
+  padding: 10px;
+  margin: 0;
+  margin-right: 10px;
+  margin-bottom: 40px;
+  overflow: hidden;
+  width:178px;
+  
+}
+
+.box_less{
+  margin: 5px;
+}
+.proitems{
+  font-size: 12px;
+  color: #777777;
+  line-height: 20px;
+
+  padding-top: 15px;
+  padding-bottom: 25px;
+}
+#allProContent .proImg{
+  margin-bottom: -10px;
+}
+
+#allProContent a{
+  color: #777777;
+}
+/********************/
+/* category  page   */
+#page_cate{
+  position: absolute;
+  margin: 0 auto;
+  margin-left: 185px;
+  padding-top: 35px;
+  width: 770px;
+  
+}
+
+#cate_img{
+  float: left;
+  width: 400px;
+}
+#cate_content{
+  float: right;
+  margin-top:0;
+  width: 340px;
+  border-top: 7px solid #595757;
+
+}
+#cate_content h3{
+  font-size: 23px;
+  color: #595757;
+  margin: 25px 0;
+}
+#cate_text{
+  color: #777777;
+  font-size: 13px;
+  line-height: 20px;
+}
+#cate_file{
+/* video */
+}
+/********************/
+/* category  page   */
+#page_pro{
+  position: absolute;
+  margin: 0 auto;
+  margin-left: 185px;
+  padding-top: 35px;
+  width: 770px;
+
+
+}
+#pro_img{
+  float: left;
+  width: 410px;
+}
+#pro_thumb{
+  float: right;
+}
+#pro_zoom{
+  float:left;
+  width: 300px;
+}
+
+#pro_content{
+  float: right;
+  margin-top:0;
+  margin-right:0;
+  width: 340px;
+  border-top: 7px solid #595757;
+}
+#line{
+  border: 1px solid #f4f4f4;
+}
+
+#pro_content h3{
+  font-size: 23px;
+  color: #595757;
+  margin: 25px 25px;
+  margin-bottom: 35px;
+}
+#pro_colorselect{
+  margin: 0 25px;
+  top: 25px;
+}
+#pro_text{
+  color: #777777;
+  font-size: 13px;
+  line-height: 20px;
+  margin: 3px 25px;
+  padding-bottom: 20px;
+  border-bottom: 1px solid #f1f1f1;
+  
+}
+#pro_color{
+  width: 270px;
+  margin: 15px 25px;}
+/* items color CSS */
+
+.ori { border: 1px solid white; margin-right: 5px;}
+.use { border: 1px solid black; margin-right: 5px;}
+.thumb{ width: 90px;}
+.small{ width: 300px;}
+
+#pro_thumb li{
+  margin: 5px 0;
+  margin-top: 0;
+}
+#pro_items{
+  text-align: right;
+  margin-right: 25px;
+}
+#pro_items a{
+  color: #595757;
+}
+#pro_items li{
+  margin-bottom: 10px;  
+  font-size:13px;
+}
+
+#pro_items a#askprice{
+  font-size:15px;
+  color: #a82124;
+
+  
+}
+#pro_items img{
+  width: 20px;
+}
+.zoomWindowContainer{
+  width: 300px;
+}
+.zoomWindow{
+  width: 300px;
+}
+
+/* optional icon style */
+.zoomIcon { 
+  width:33px; 
+  height:33px; 
+  position:absolute; 
+  top:0;
+  right:0;
+  background:url(img/icon.png);
+}
+
+.zoom p { position:absolute; top:3px; right:28px; color:#fff; font:bold 13px/1 sans-serif;}
+
+.zoom {
+  display:inline-block;
+  position:relative;
+}
+
+.zoom img {
+  display: block;
+}
+
+.zoom img::selection { background-color: transparent; }
+
+/********************/
+/*  MSBT contact US */
+#conMenu{
+  position: relative;
+  float: left;
+  color: #595757;
+  width: 200px;
+  top:35px;
+  left:35px;
+  font-size: 10pt;
+  font-family: 'AvenirNext-Ultra Light';
+  line-height: 10px;
+}
+
+#conContent{
+  position: relative;
+  float: right;
+  color: #595757;
+  font-size: 9pt;
+}
+
+#contactUs{
+  border-top: 1px solid #f4f4f4;
+  border-bottom: 1px solid #f4f4f4;
+  padding-top: 40px;
+  padding-bottom: 40px;
+}
+
+#conTitle h4{
+  font-size: 14px;
+  color: #595757;
+}
+#conMenu a{
+  color: #595757;
+}
+/**************/
+/* setup CSS */
+#setup_diy-b, #setup_teach-b, #setup_explanation-b, #setup_case-b{
+  display: none;
+}
+
+#page_setup{
+  position: absolute;
+  margin: 0 auto;
+  margin-left: 185px;
+  padding-top: 0;
+  width: 770px;
+  
+}
+
+#setup{
+  font-size: 9pt;
+  color:#595757;
+  line-height: 15px;
+}

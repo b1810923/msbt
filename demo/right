@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>jQuery Parallax Plugin Demo</title>
+<link href="style.css" rel="stylesheet" type="text/css" />
+<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.6.4/jquery.min.js"></script>
+<script type="text/javascript" src="scripts/jquery.parallax-1.1.3.js"></script>
+<script type="text/javascript" src="scripts/jquery.localscroll-1.2.7-min.js"></script>
+<script type="text/javascript" src="scripts/jquery.scrollTo-1.4.2-min.js"></script>
+<script type="text/javascript">
+$(document).ready(function(){
+	$('#nav').localScroll(800);
+	
+	//.parallax(xPosition, speedFactor, outerHeight) options:
+	//xPosition - Horizontal position of the element
+	//inertia - speed to move relative to vertical scroll. Example: 0.1 is one tenth the speed of scrolling, 2 is twice the speed of scrolling
+	//outerHeight (true/false) - Whether or not jQuery should use it's outerHeight option to determine when a section is in the viewport
+	$('#intro').parallax("50%", 0.1);
+	$('.story').parallax("50%", 0.1);
+	$('.float-left').parallax("50%", 0.1);
+
+	/*
+	$('#second').parallax("50%", 0.1);
+	$('.bg').parallax("50%", 0.4);
+	$('#third').parallax("50%", 0.3);
+	*/
+})
+</script>
+</head>
+
+<body>
+	<ul id="nav">
+		<li><a href="#intro" title="Next Section"><img src="images/dot.png" alt="Link" /></a></li>
+	    <li><a href="#second" title="Next Section"><img src="images/dot.png" alt="Link" /></a></li>
+	    <li><a href="#third" title="Next Section"><img src="images/dot.png" alt="Link" /></a></li>
+	    <li><a href="#fifth" title="Next Section"><img src="images/dot.png" alt="Link" /></a></li>
+	</ul>
+
+	<div id="intro">
+		<div class="story">
+	    	<div class="float-left">
+			<h2>(Almost) Static Background</h2>
+	        <p>This section has a background that moves slightly slower than the user scrolls. This is achieved by changing the top position of the background for every pixel the page is scrolled.</p>
+	        </div>
+	    </div> <!--.story-->
+	</div> <!--#intro-->
+	<div id="second">
+		<div class="story">
+			<div class="blog"></div>
+			<div class="float-left">
+				<h2>打造自己的夢想空間</h2>
+				<p>大面窗戶裝上全幅的窗簾</p>
+				<p>擺脫傳統一層布、一層紗的厚重</p>
+				<p>氣勢宏大卻仍不減簡約時尚</p>
+				<div class="more"></div>
+			</div>
+			<div class="case"></div>
+		</div>
+	</div>
+	<div id="third">
+		<div class="story">
+			<div class="float-left">
+				<p>來自歐洲設計美學</p>
+				<p>追求細節中的獨特品味</p>
+			</div>
+			<div class="diy"></div>
+			<div class="float-right">
+				<p>均附完整安裝零配件與</p>
+				<p>圖文說明，即使是DIY新手</p>
+				<p>也不會彷徨失措</p>
+			</div>
+			<div class="vedio"></div>
+		</div>
+	</div>

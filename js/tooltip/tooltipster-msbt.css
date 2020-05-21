@@ -1,0 +1,18 @@
+.tooltipster-msbt{
+	border-radius: 5px;
+	border: 0.5pt solid white;
+	padding: 5px 10px;
+	background: white;
+	color: white;
+	-webkit-box-shadow: 0 0 15px rgba(0,0,0, .35);
+	-moz-box-shadow: 0 0 15px rgba(0,0,0, .35);
+	box-shadow: 0 0 15px rgba(0,0,0, .35);
+
+}
+
+
+.tooltipster-msbt .tooltipster-content{
+	font-family: Arial, sans-serif;
+	font-size: 14px;
+
+}

@@ -1,0 +1,386 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>jQuery Parallax Plugin Demo</title>
+
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.1/jquery.min.js" type="text/javascript"></script>
+
+<script type="text/javascript" src="scripts/jquery.parallax-1.1.3.js"></script>
+<script type="text/javascript" src="scripts/jquery.localscroll-1.2.7-min.js"></script>
+<script type="text/javascript" src="scripts/jquery.scrollTo-1.4.2-min.js"></script>
+
+<!-- slider -->
+<script type="text/javascript" src="../js/jquery.nivo.slider.pack.js"></script>
+<link rel="stylesheet" href="../themes/default/default.css" type="text/css">
+<link rel="stylesheet" href="../css/nivo-slider.css" type="text/css" />
+
+<style>
+</style>
+<script type="text/javascript">
+$(window).load(function(){
+	$('#slider').nivoSlider();
+});
+</script>
+<style>
+.sliderdiv{
+	margin: 0,auto;
+}
+@charset "utf-8";
+/* CSS Document */
+
+body{
+	margin: 0;
+	min-width: 980px;
+	padding: 0;
+}
+
+p{
+	margin: 0 0 20px 0;	
+}
+
+p, ul{
+	font-family:"Proxima Nova Light", 'Helvetica Neue', Arial, Helvetica, sans-serif;
+	font-size-adjust:0.488;
+	font-weight:200;
+	font-style:normal;
+}
+
+img{
+	border: 0;
+}
+
+h1, #pixels{
+	font-family:"Museo 900", Verdana, serif;
+	font-size-adjust:0.40;
+	font-weight:700;
+	font-style:normal;
+}
+
+h2{
+	font-family:"Beau Sans Pro Book", Verdana, sans-serif;
+	font-size-adjust:0.531;
+	font-weight:500;
+	font-style:normal;
+}
+
+#header h1, #pixels{
+	color: #48941A;
+}
+
+
+.center{
+	font-size: 2.5em;
+	padding: 80px 0 0 0;
+	text-align: center;
+}
+
+#nav{
+	list-style: none;
+	right: 20px;
+}
+
+#nav li{
+	margin: 0 0 15px 0;	
+}
+
+#header, #intro, #second{
+	width: 100%;
+}
+
+#intro{
+	color: white;
+	height: 580px;
+	margin: 0 auto;
+	padding: 0;
+	position: relative;
+}
+
+#second{
+	background: url(../img/index/bg2.jpg) 100% 10% no-repeat fixed;
+	color: white;
+	height: 1300px;
+	margin: 0 auto;
+	overflow: hidden;
+	padding: 0;
+}
+
+
+
+.story{
+	margin: 0 auto;
+	min-width: 1000px;
+	overflow: auto;
+	width: 1000px;
+}
+
+.story .float-left, .story .float-right{
+	padding: 500px 0 0 0;
+	position: relative;
+	width: 350px;	
+}
+.float-word1{
+	float: left;	
+	margin: 0 0 0 0px;
+	color: black;
+	position: relative;
+	width: 550px;	
+	margin-left: 250px;
+}
+
+.float-word1 h2{
+	padding-top: 15px;
+	padding-bottom: 25px;
+}
+.float-word1 p{
+	line-height: 5px;
+	font-size: 16px;
+}
+.more{
+	margin-left: 260px;
+}
+.blog{
+	width: 500px;
+	position: relative;
+	margin-top: 400px;
+	margin-left: 250px;
+}
+.case img{
+	margin: 10px 0 0 0;
+}
+
+/*  bg3 */
+#third{
+	background: url(../img/index/bg3.jpg) 0% 30px no-repeat fixed;
+	color: white;
+	height: 1350px;
+	margin-top: 20px;
+	padding: 100px 0 0 0;	
+}
+.ballchain{
+	margin: -350px 0 0 0;
+}
+.float-left{
+	float: left;	
+	margin: 0;
+	
+}
+.float-left p{
+	color: #595757;
+	line-height: 17px;
+	z-index: 3;
+}
+.float-right{
+	float: right;
+	margin: 0 20px 0 0;
+}
+.diy{
+	position: absolute;
+	margin: 0 200px 0 0;
+}
+.moreitems{
+
+	margin: 170px 0 0 180px;
+}
+/* slider */
+.nivoSlider {
+	position:relative;
+	width:100%;
+	height:auto;
+	overflow: hidden;
+	margin: 0 auto;
+
+}
+.nivoSlider img {
+	position:absolute;
+	top:0px;
+	left:0px;
+	max-width: none; /*[ori] none;*/
+}
+.nivo-main-image {
+	display: block !important;
+	position: relative !important; 
+	width: 100% !important;
+}
+
+/* If an image is wrapped in a link */
+.nivoSlider a.nivo-imageLink {
+	position:absolute;
+	top:0px;
+	left:0px;
+	width:100%;
+	height:100%;
+	border:0;
+	padding:0;
+	margin:0;
+	z-index:6;
+	display:none;
+	background:white; 
+	filter:alpha(opacity=0); 
+	opacity:0;
+}
+/* The slices and boxes in the Slider */
+.nivo-slice {
+	display:block;
+	position:absolute;
+	z-index:5;
+	height:100%;
+	top:0;
+}
+.nivo-box {
+	display:block;
+	position:absolute;
+	z-index:5;
+	overflow:hidden;
+}
+.nivo-box img { display:block; }
+
+/* Caption styles */
+.nivo-caption {
+	position:absolute;
+	left:0px;
+	bottom:0px;
+	background:#000;
+	color:#fff;
+	width:100%;
+	z-index:8;
+	padding: 5px 10px;
+	opacity: 0.8;
+	overflow: hidden;
+	display: none;
+	-moz-opacity: 0.8;
+	filter:alpha(opacity=8);
+	-webkit-box-sizing: border-box; /* Safari/Chrome, other WebKit */
+	-moz-box-sizing: border-box;    /* Firefox, other Gecko */
+	box-sizing: border-box;         /* Opera/IE 8+ */
+}
+.nivo-caption p {
+	padding:5px;
+	margin:0;
+}
+.nivo-caption a {
+	display:inline !important;
+}
+.nivo-html-caption {
+    display:none;
+}
+/* Direction nav styles (e.g. Next & Prev) */
+.nivo-directionNav a {
+	position:absolute;
+	top:45%;
+	z-index:9;
+	cursor:pointer;
+}
+.nivo-prevNav {
+	left:0px;
+}
+.nivo-nextNav {
+	right:0px;
+}
+/* Control nav styles (e.g. 1,2,3...) */
+.nivo-controlNav {
+	text-align:left;
+	position: absolute;
+	top: 555px;
+	z-index: 7;
+
+}
+.nivo-controlNav a {
+	cursor:pointer;
+}
+.nivo-controlNav a.active {
+	font-weight:bold;
+
+}
+</style>
+<script>
+$(document).ready(function(){
+	$('#nav').localScroll(800);
+	
+	//.parallax(xPosition, speedFactor, outerHeight) options:
+	//xPosition - Horizontal position of the element
+	//inertia - speed to move relative to vertical scroll. Example: 0.1 is one tenth the speed of scrolling, 2 is twice the speed of scrolling
+	//outerHeight (true/false) - Whether or not jQuery should use it's outerHeight option to determine when a section is in the viewport
+	$('#intro').parallax("50%", 0.1);
+	$('.story').parallax("50%", 3.1);
+	$('.float-word1').parallax("50%", 1.8);
+	$('.blog').parallax("50%", 2.9);
+	$('.case').parallax("50%", 1.1);
+	$('.ballchain').parallax("50%",0.9);
+	$('.diy').parallax("50%",0.3);
+	/*
+	$('.more').parallax("50%", 0.1);
+	
+	$('#second').parallax("50%", 0.1);
+	$('.bg').parallax("50%", 0.4);
+	$('#third').parallax("50%", 0.3);
+	*/
+})
+</script>
+</head>
+
+<body>
+	<ul id="nav">
+		<li><a href="#intro" title="Next Section"><img src="images/dot.png" alt="Link" /></a></li>
+	    <li><a href="#second" title="Next Section"><img src="images/dot.png" alt="Link" /></a></li>
+	    <li><a href="#third" title="Next Section"><img src="images/dot.png" alt="Link" /></a></li>
+	</ul>
+
+	<div id="intro">
+		<div class="story">
+	    	<div class="sliderdiv">
+				<div class="slider-wrapper theme-default" style="width:1000px;">
+					<div id="slider" class="nivoSlider" >
+						<img src="../img/index/slide1.jpg" alt="" />
+						<img src="../img/index/slide2.jpg" alt="" />
+						<img src="../img/index/slide3.jpg" alt="" />
+						<img src="../img/index/slide4.jpg" alt="" />
+					</div>
+				</div>
+			</div>
+	    </div> <!--.story-->
+	</div> <!--#intro-->
+	
+	<div id="second">
+		<div class="story">
+		<div class="blog"><img src="../img/index/word2-1.jpg"></div>
+			<div class="float-word1">
+				<h2>打造自己的夢想空間</h2>
+				<p>大面窗戶裝上全幅的窗簾</p>
+				<p>擺脫傳統一層布、一層紗的厚重</p>
+				<p>氣勢宏大卻仍不減簡約時尚</p>
+				<div class="more"><img src="../img/index/word2-2.jpg"></div>
+			</div>
+			<div class="case"><img src="../img/index/photo2-1.jpg">
+				<img src="../img/index/photo2-2.jpg"></div>	
+		</div>
+		
+	</div>
+	<div id="third">
+		<div class="story">
+			<div class="float-left">
+				<p>來自歐洲設計美學<br/>追求細節中的獨特品味</p>
+				<div class="moreitems"><img src="../img/index/word3-3.jpg"></div>
+				
+			</div>
+			<div class="float-right">
+				<div class="diy">
+					<img src="../img/index/word3-1.jpg">
+				</div>
+			</div>
+			<div class="float-right">
+				<p>均附完整安裝零配件與<br/>
+					圖文說明，即使是DIY新手<br/>
+					也不會彷徨失措</p>
+				<div class="moreteach"></div>
+			</div>
+
+			
+		</div>
+		<div class="ballchain">
+			
+			<div class="video"></div>
+			
+			<img src="../img/index/word3-4.png"></div>
+			
+	</div>

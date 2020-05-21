@@ -1,0 +1,25 @@
+<?php if( ! defined('BASEPATH')) exit('No direct script access allowed');
+
+class Sampleget extends CI_Controller{
+	public function __construct(){
+		parent::__construct();
+		$this->load->helper('url');
+	}
+	
+	public function index(){
+		$this->load->library('email');
+
+		$this->email->from('susan@msbt.com.tw');
+		$this->email->to('b1810923@gmail.com');
+		$this->email->cc('susan@msbt.com.tw');
+
+		$this->email->subject('give To My Email Test');
+		$this->email->message('Test the email class');
+
+		$this->email->send();
+
+		echo $this->emial->print_debugger();
+
+	}
+
+}

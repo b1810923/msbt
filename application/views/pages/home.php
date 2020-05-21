@@ -1,0 +1,1 @@
+i am home.php , in the view/pages ....... !!!!

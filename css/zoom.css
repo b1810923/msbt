@@ -1,0 +1,24 @@
+@charset "utf-8";
+
+/* optional icon style */
+.zoomIcon { 
+	width:33px; 
+	height:33px; 
+	position:absolute; 
+	top:0;
+	right:0;
+	background:url(img/icon_search.jpg);
+}
+
+.zoom p { position:absolute; top:3px; right:28px; color:#fff; font:bold 13px/1 sans-serif;}
+
+.zoom {
+	display:inline-block;
+	position:relative;
+}
+
+.zoom img {
+	display: block;
+}
+
+.zoom img::selection { background-color: transparent; }

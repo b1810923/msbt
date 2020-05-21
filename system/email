@@ -1,0 +1,21 @@
+<?php
+
+	$this->load->library('email');
+
+	$config['protocol']	= 'smtp';
+	$config['smtp_host'] = 'smtp.gmail.com';
+	$config['smtp_user'] = 'service@msbt.com.tw';
+	$config['smtp_pass'] = 'msbt034880250msbt';
+	$config['smtp_port'] = '465';
+	$config['_smtp_auth']= TRUE;
+
+	$this->email->initialize($config);
+
+	$this->email->to('');
+	$this->email->from();
+	$this->email->subject();
+	$this->email->message();
+	$this->email->send();
+
+	echo $this->email->print_debugger();
+?>
